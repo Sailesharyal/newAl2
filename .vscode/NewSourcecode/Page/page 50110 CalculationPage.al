@@ -148,3 +148,5 @@ page 50110 CalculationCardPage
     var
         Makevisible: Boolean;
 }
+gt 
+
