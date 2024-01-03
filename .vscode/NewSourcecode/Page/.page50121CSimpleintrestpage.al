@@ -129,6 +129,7 @@ page 50121 SimpleintrestCardpage
         {
             group(Another6)
             {
+
                 action(anotheraction9)
                 {
                     trigger OnAction()

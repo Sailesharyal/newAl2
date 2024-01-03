@@ -11,7 +11,7 @@
             "authentication": "Windows",
             
             "startupObjectType": "Page",
-    "startupObjectId": 50120,
+    "startupObjectId": 50113,
             "breakOnError": "All",
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
