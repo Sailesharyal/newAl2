@@ -125,6 +125,19 @@ page 50121 SimpleintrestCardpage
                 }
             }
         }
+        area(Creation)
+        {
+            group(Another6)
+            {
+                action(anotheraction9)
+                {
+                    trigger OnAction()
+                    begin
+                        Message('This is action');
+                    end;
+                }
+            }
+        }
 
     }
 
