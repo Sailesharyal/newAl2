@@ -137,7 +137,18 @@ page 50121 SimpleintrestCardpage
                     end;
                 }
             }
+            group(another10)
+            {
+                action(clickme)
+                {
+                    trigger OnAction()
+                    begin
+                        message('this is action');
+                    end;
+                }
+            }
         }
+
 
     }
 
