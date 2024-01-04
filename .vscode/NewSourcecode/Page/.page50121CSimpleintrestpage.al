@@ -149,24 +149,9 @@ page 50121 SimpleintrestCardpage
                 }
             }
 
-            group(sailesh)
-            {
-                Action(Aryal)
-                {
-                    trigger OnAction()
-                    begin
-                        Message('i am sailesh aryal');
-                    end;
-
-                }
-            }
         }
 
 
     }
 
-
 }
-
-
-

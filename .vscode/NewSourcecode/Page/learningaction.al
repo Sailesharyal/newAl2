@@ -80,11 +80,26 @@ page 50113 learningaction
                     end;
 
                 }
+
             }
 
+            group(sailesh)
+            {
+                Action(Aryal)
+                {
+                    trigger OnAction()
+                    begin
+                        Message('i am sailesh aryal');
+                    end;
+
+                }
+            }
         }
 
+
     }
+
+
 
 
 
@@ -96,7 +111,6 @@ page 50113 learningaction
         Rate: Decimal;
 
         get_result: Decimal;
-
 
 
 
