@@ -148,6 +148,18 @@ page 50121 SimpleintrestCardpage
                     end;
                 }
             }
+
+            group(sailesh)
+            {
+                Action(Aryal)
+                {
+                    trigger OnAction()
+                    begin
+                        Message('i am sailesh aryal');
+                    end;
+
+                }
+            }
         }
 
 
