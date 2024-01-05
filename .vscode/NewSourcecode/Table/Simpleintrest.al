@@ -68,7 +68,7 @@ table 50120 Simpleintrest
 
     trigger OnModify()
     begin
-
+        Message('you have modified your data');
     end;
 
     trigger OnDelete()
@@ -78,7 +78,7 @@ table 50120 Simpleintrest
 
     trigger OnRename()
     begin
-
+        Message('you have renamed your file');
     end;
 
 }
