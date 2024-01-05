@@ -1,19 +1,14 @@
-pageextension 50012 "Item List Ext" extends "Item List"
+pageextension 50015 teamcardpage extends "Item Card"
 {
     layout
-
     {
-        // Add changes to page layout here
-        modify("No.")
-        {
-            Caption = 'No Not valid';
-        }
-        addbefore(Description)
+        addafter(Blocked)
         {
             field(Item_Description; Rec.Item_Description)
             {
                 ApplicationArea = All;
                 Caption = 'Item Description';
+
             }
         }
     }
