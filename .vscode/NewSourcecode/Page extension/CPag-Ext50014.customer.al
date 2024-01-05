@@ -16,6 +16,8 @@ pageextension 50014 "Customer Card Ext" extends "Customer Card"
                 ApplicationArea = All;
 
             }
+
+
         }
 
 
@@ -31,9 +33,43 @@ pageextension 50014 "Customer Card Ext" extends "Customer Card"
 
     actions
     {
-        // Add changes to page actions here
+        addfirst(reporting)
+        {
+
+            action(clickhere)
+
+            {
+                ApplicationArea = All;
+                Caption = 'Clickhere';
+                Promoted = true;
+                PromotedCategory = New;
+                PromotedIsBig = true;
+                RunObject = page "Customer card";
+
+                trigger OnAction()
+
+
+                begin
+                    Message('This is page');
+                end;
+
+
+
+
+            }
+        }
     }
 
-    var
-        myInt: Integer;
+
+
+
+
+
+
+
+
+
+
+
 }
+
