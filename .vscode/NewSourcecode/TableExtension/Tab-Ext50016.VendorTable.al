@@ -1,5 +1,6 @@
 tableextension 50016 "vendor Ext" extends Vendor
 {
+
     fields
     {
         field(5000; Vendor_Name; Text[50])
@@ -25,10 +26,10 @@ tableextension 50016 "vendor Ext" extends Vendor
                 myInt: Integer;
             begin
                 if Rec.Satisfaction = true then begin
-                    Message('Thank for liing out service');
+                    Message('Thank you for your feedback');
                 end
                 else begin
-                    Message('plz give us feedback');
+                    Message('Do you have any problem');
                 end;
 
             end;
