@@ -33,30 +33,54 @@ pageextension 50014 "Customer Card Ext" extends "Customer Card"
 
     actions
     {
-        addfirst(reporting)
+        addfirst(processing)
         {
 
-            action(clickhere)
-
+            group(Ribbon)
             {
-                ApplicationArea = All;
-                Caption = 'Clickhere';
-                Promoted = true;
-                PromotedCategory = New;
-                PromotedIsBig = true;
-                RunObject = page "Customer card";
-
-                trigger OnAction()
-
-
-                begin
-                    Message('This is page');
-                end;
+                Image = Warning;
 
 
 
+
+
+                action(clickhere)
+
+                {
+                    ApplicationArea = All;
+                    Caption = 'Sailesh';
+                    Promoted = true;
+                    PromotedCategory = New;
+                    PromotedOnly = true;
+                    PromotedIsBig = true;
+
+                    trigger OnAction()
+                    begin
+                        Message('this is Action');
+                    end;
+                }
+
+
+                action(clickhere2)
+
+                {
+                    ApplicationArea = Basic, Suite;
+                    Caption = 'Sailesh2';
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    PromotedOnly = true;
+                    PromotedIsBig = true;
+
+
+
+                    trigger OnAction()
+                    begin
+                        Message('this is Action2');
+                    end;
+                }
 
             }
+
         }
     }
 
