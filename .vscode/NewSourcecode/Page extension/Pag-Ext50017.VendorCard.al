@@ -75,6 +75,17 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
                 end;
 
             }
+            action(action3)
+            {
+                Caption = 'Action3';
+                ToolTip = 'This is action 3';
+
+                trigger OnAction()
+                begin
+                    Message('This is message');
+                end;
+
+            }
 
         }
 
