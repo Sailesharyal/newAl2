@@ -29,9 +29,16 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
 
     actions
     {
+
         addfirst(processing)
+
         {
             group(group1)
+
+
+
+
+
             {
                 Caption = 'group';
                 ToolTip = 'this is just a sample group';
@@ -39,10 +46,13 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
 
 
 
+
+
                 action(Action1)
                 {
 
-                    Caption = 'Actio1';
+
+                    Caption = 'Action1';
                     ToolTip = 'This is just a sample action';
                     Promoted = true;
                     PromotedCategory = Process;
@@ -61,25 +71,23 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
 
             }
 
-
-            group(addfirst)
+            action(Action2)
             {
-                action(Action2)
-                {
 
-                    Caption = 'Action2';
-                    ToolTip = 'This is just a sample action';
-                    Promoted = true;
-                    PromotedCategory = New;
-                    PromotedIsBig = true;
-                    PromotedOnly = true;
+                Caption = 'Action2';
+                ToolTip = 'This is just a sample action';
+                Promoted = true;
+                PromotedCategory = Process;
+                PromotedIsBig = true;
+                PromotedOnly = true;
 
-                    trigger OnAction()
-                    begin
-                        Message('This is a message for action');
 
-                    end;
-                }
+                trigger OnAction()
+                begin
+                    Message('This is a message for action');
+
+                end;
+
             }
             action(action3)
             {
@@ -95,7 +103,32 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
 
         }
 
+        addbefore(ContactBtn)
+        {
+            group(newactions)
+            {
+                action(newaction1)
+                {
+                    Caption = 'newAction1';
+                    ToolTip = 'This is just a sample action';
+                    Promoted = true;
+                    PromotedCategory = Process;
+                    PromotedIsBig = true;
+                    PromotedOnly = true;
+
+                }
+            }
+        }
+
+
+
+
+
+
+
+
     }
+
 
     var
         myInt: Integer;
