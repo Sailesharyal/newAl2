@@ -37,6 +37,8 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
                 ToolTip = 'this is just a sample group';
                 Image = PersonInCharge;
 
+
+
                 action(Action1)
                 {
 
@@ -45,7 +47,7 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    PromotedOnly = true;
+                    // PromotedOnly = true;
 
                     trigger OnAction()
                     begin
@@ -58,22 +60,26 @@ pageextension 50017 VendorCardExt extends "Vendor Card"
 
 
             }
-            action(Action2)
+
+
+            group(addfirst)
             {
+                action(Action2)
+                {
 
-                Caption = 'Action2';
-                ToolTip = 'This is just a sample action';
-                Promoted = true;
-                PromotedCategory = New;
-                PromotedIsBig = true;
-                PromotedOnly = true;
+                    Caption = 'Action2';
+                    ToolTip = 'This is just a sample action';
+                    Promoted = true;
+                    PromotedCategory = New;
+                    PromotedIsBig = true;
+                    PromotedOnly = true;
 
-                trigger OnAction()
-                begin
-                    Message('This is a message for action');
+                    trigger OnAction()
+                    begin
+                        Message('This is a message for action');
 
-                end;
-
+                    end;
+                }
             }
             action(action3)
             {
