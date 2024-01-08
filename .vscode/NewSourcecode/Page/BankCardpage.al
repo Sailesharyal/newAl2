@@ -49,8 +49,14 @@ page 50104 BankdetailCardpage
                 {
                     ApplicationArea = All;
                 }
-
-
+                field(Gender; Rec.Gender)
+                {
+                    ApplicationArea = All;
+                }
+                field(Enum_DataType; Rec.Enum_DataType)
+                {
+                    ApplicationArea = All;
+                }
 
 
             }

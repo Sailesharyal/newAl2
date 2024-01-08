@@ -45,20 +45,32 @@ table 50106 BanksDetail
             DataClassification = CustomerContent;
         }
 
-        field(6; BankAccount; Code[100])
+        field(6; BankAccount; Code[20])
         {
             DataClassification = CustomerContent;
+            TableRelation = "Bank Account";
         }
 
         field(7; BankAccountName; Text[100])
         {
-            DataClassification = CustomerContent;
+            FieldClass = FlowField;
+            CalcFormula = lookup("Bank Account".Name where("No." = field(BankAccount)));
         }
 
         field(8; IsVisible; Boolean)
         {
             DataClassification = ToBeClassified;
         }
+        field(9; "Gender"; Option)
+        {
+            DataClassification = ToBeClassified;
+            OptionMembers = "",Male,Female,Others;
+        }
+        field(10; Enum_DataType; Enum DataType)
+        {
+            DataClassification = ToBeClassified;
+        }
+
 
 
     }

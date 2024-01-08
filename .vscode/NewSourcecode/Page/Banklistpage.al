@@ -53,7 +53,10 @@ page 50103 BankDetailListpage
                 {
                     ApplicationArea = All;
                 }
-
+                field(Gender; Rec.Gender)
+                {
+                    ApplicationArea = All;
+                }
 
 
 
