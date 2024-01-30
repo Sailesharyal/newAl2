@@ -24,8 +24,28 @@ page 50150 "Learningbuildinprocuders"
                             Message('Your have added a Number 1%', number);
 
                     end;
+                }
+
+                field(Conformation; Conformation)
+                {
+                    ApplicationArea = All;
+                    trigger OnValidate()
+                    begin
 
 
+                        // Check if the user wants to proceed with the deletion
+                        if CONFIRM('Are you sure you want to add  this Value ?') then
+                            Message('yes')
+                        else
+                            // If user cancels, do not delete the customer record
+                            IF Conformation = false THEN
+                                Message('dont lile the service')
+
+                            else
+                                Message('Thankyou');
+
+
+                    end;
                 }
 
             }
@@ -52,4 +72,6 @@ page 50150 "Learningbuildinprocuders"
 
     var
         Number: Integer;
+
+        Conformation: Boolean;
 }
